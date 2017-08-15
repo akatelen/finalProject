@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>HTML and CSS Study</title>
+<link rel="stylesheet" href="assets/css/cass.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/*		type styles*/
+	#typestudy{
+		font-size:30px; 
+		font-family:verdana; 
+		color: rgba(255,119,51,.75); 
+		font-weight:800; 
+		font-style:italic; 
+		text-decoration:underline;
+		line-height:2em;
+		letter-spacing:-2px;
+		text-align:justify;
+		text-transform:capitalize;
+	}
+
+/*		layout styles*/
+/*		padding, margin, background, border*/
+	#layout {
+		background:#9df;
+		padding:10px;
+	}
+	#layout div{
+		padding:20px;
+		margin:10px;
+		border:1px #fff solid;
+	}
+	#layout #bdr{
+		border-right:none;
+		border-left-color:#f73;
+		border-left-width: 3px;
+		border-left-style: dotted;
+		border-radius: 10px 0px 0px 10px;
+	}
+	#bgc{
+		background-color: #f73;
+		color:#fff;
+	}
+	#bgg{
+		background-image:linear-gradient(-45deg, #6ad,#9df, #6ad);
+		color:#19d;
+	}
+	#bgi{
+		background-image: url(assets/img/pony3.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top right;
+	}
+
+/*		use margin to center div*/
+	#layout #centerThis{
+		width:300px;
+		margin:0px auto;
+	}
+
+/*		shadow*/
+	#shadows{
+		box-shadow: inset 5px 5px 10px 1px rgba(0,0,0,.5);
+		text-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	}
+
+/*		display block on links with images*/
+	.linkimg img{
+		width:100%;
+	}
+
+	.linkimg{
+		background-color: #6ad;
+	}
+
+	.linkblk{
+		display: block;
+	}
+
+/*		width, height and display on divs*/
+	.w200{
+		width:200px;
+	}
+	.dib{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.vertalign img{
+		height:30px;
+		vertical-align: middle;
+	}
+
+/*		floating*/
+	#floatContainer .floatThis{
+		width:43%;
+		margin:0px;
+		float: left;
+	}
+	#floatContainer:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+/*		position*/
+	#position{
+		background:#f73;
+	}
+	.positionThis{
+		bottom:20px;
+		right:10px;
+		padding:20px;
+		border:1px solid #19d;
+	}
+
+/*		display flex*/
+	#flexcontainer{
+		background:#6ad;
+		text-align:center;
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
+		align-items:center;
+		align-content:center;
+		height:500px;
+	}
+
+	.flexcontent{
+		border:1px #fff solid;
+		background:#f73;
+		color:#fff;
+		padding:5px;
+		width:50px;
+		display:inline-block;
+	}
+
+/*	animation*/
+	#animation{
+		padding:20px;
+	}
+	@keyframes animename {
+		0%{
+			background:#628;
+			color:#fff;
+			transform: scale(1,1);
+		}
+
+		50%{
+			background:#fff;
+			color:#f73;
+			transform: scale(2,2);
+		}
+
+		100%{
+			background:#628;
+			color:#fff;
+			transform: scale(1,1);
+		}
+	}
+
+	#animatethis{
+		animation: animename 2s linear infinite;
+		width:50px;
+		margin:0 auto;
+		padding:10px;
+		text-align: center;
+	}
+
+/*	selectors*/
+	.para, td {
+		color:#17d;
+	}
+	td {
+		font-weight:bold;
+	}
+	td[rowspan="2"]{
+		background-color:#f73;
+	}
+	td[rowspan="2"] + td {
+		background-color:#f73;
+	}
+	td[rowspan="2"] ~ td {
+		padding: 15px;
+	}
+	tr:first-of-type td {
+		color: #628;
+	}
+	table tr:last-of-type td {
+		color: #628;
+	}
+	td:first-child{
+		border:1px #628 solid;
+	}
+	td:last-child{
+		border:1px #628 solid;
+	}
+	tr{
+		background-color: #fff;
+	}
+	tr:nth-child(1){
+		font-size: 40px;
+	}
+	tr:nth-child(odd){
+		background-color: #9df;
+	}
+	
+	#selector > table > tbody > tr > td{
+		padding:15px;
+	}
+
+/*	cascading experiment part 3 inline*/
+	h6{
+		font-size:90px;
+	}
+	h6{
+		font-size:5px;
+	}
+
+
+/*	media query*/
+	.column {
+		float: left;
+		padding: 20px;
+	}
+
+	#c1 {
+		width: 25%;
+	}
+
+	#c2 {
+		width: 75%
+	}
+
+	@media screen and (max-width: 700px) {
+		.column {
+			float: none;
+		}
+		#c1,
+		#c2 {
+			width: 100%;
+		}
+	}
+</style>
+</head>
+<body>
+	<!--navigation-->
+	<header>
+		<img id="logo" src="assets/img/logo.png">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="htmlcheatsheet.html">HTML</a></li>
+				<li><a href="cssstudy.html">CSS</a>
+					<ul>
+						<li><a href="cssstudy.html#type">Typography</a></li>
+						<li><a href="cssstudy.html#layout">Layout</a></li>
+						<li><a href="cssstudy.html#position">Position</a></li>
+						<li><a href="cssstudy.html#flex">Flex</a></li>
+						<li><a href="cssstudy.html#animation">Animation</a></li>
+						<li><a href="cssstudy.html#cascade">Cascade</a></li>
+						<li><a href="cssstudy.html#media">Media Query</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!--page title-->
+	<h1 class="title">CSS Study</h1>
+
+	<div id="type">
+		<h2>Typography</h2>
+		<blockquote id="typestudy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+	</div>
+	<div id="layout">
+		<h2>Layout</h2>
+		<p>Spacing, Border, and Backgrounds</p>
+		<div id="bdr">
+			Customize border
+		</div>
+		<div id="bgc">
+			Customizebg color
+		</div>
+		<div id="bgg">
+			Customize bg gradient
+		</div>
+		<div id="bgi">
+			Customize bg image
+		</div>
+		
+		<p>We can also use margins to center content like so...</p>
+		
+		<div id="centerThis">
+			<p>this div is centered on the page</p>
+		</div>
+		<div id="shadows">
+			<h1>Text Shadow</h1>
+		</div>
+		<p>Elements like DIV and P are Block Elements. Sometimes we need the change the Display Property to get what we want. Check out this test:</p>
+		
+		<a href="" class="linkimg">
+			<img src="assets/img/pony4.png">
+		</a>
+		<br><br>
+		<a href="" class="linkimg linkblk">
+			<img src="assets/img/pony4.png">
+		</a>
+		
+		<p>There are a few ways to display DIVs vertically. setting them to inline block is one.</p>
+		<div class="w200">
+			<p>this div has a width of 200px</p>
+		</div>
+		<div class="w200">
+			<p>Same here, but the DIVS still stack even if there is room</p>
+		</div>
+		
+		<div class="w200 dib">
+			<p>but changing display to inline block</p>
+		</div>
+		<div class="w200 dib">
+			<p>will have them stack horizontally. here's some more text to to see the vertical alignment</p>
+		</div>
+		<div>
+			<h3 class="vertalign"><img src="assets/img/pony1.jpg"> vertical align also works when placing an image in a line of text</h3>
+		</div>
+		<p>another way to horizontally align div is using float.</p>
+		<div id="floatContainer">
+			<div class="floatThis">
+				<p>column 1</p>
+			</div>
+			<div class="floatThis">
+				<p>column 2</p>
+			</div>
+			<br style="clear:both;">
+			<p>remember to clear the float when done either with a br clear both of and ::after on the container</p>
+			
+			<p>
+				<img src="assets/img/pony3.png" style="float:left; width:80px; border-radius:50%;">
+				Floats are originally used to wrap content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<p>widths</p>
+		<div style="width:300px;">
+			set in px
+		</div>
+		<div style="width:40%;">
+			set in %
+		</div>
+		<div style="width:5em;">
+			set in em
+		</div>
+		<div style="width:calc(100% - 100px);">
+			set in calc
+		</div>
+		<div style="width:50vw;">
+			set in viewport width
+		</div>
+		<p>height</p>
+		<div style="height:150px;">
+			set in px
+		</div>
+		<div style="height:5em;">
+			set in em
+		</div>
+		<div style="height:20vh;">
+			set in viewport height
+		</div>
+		<p>note percent in height doesn't work unless parent height is declared</p>
+		<div style="height:40%;">
+			set in % doesn't work...
+		</div>
+		<div style="height:500px">
+			<div style="height:30%;">
+				...unless the parent has a height
+			</div>
+			<div style="height:calc(30% - 30px);">
+				calc works too
+			</div>
+		</div>
+		<div style="height:100px; overflow-y:scroll; overflow-x:hidden;">
+			<p>content overflow</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	<div id="position">
+		<p>positions and z-index</p>
+		<div style="position:relative;">
+			<div style="position:relative; background:#fff; z-index:2;" class="positionThis">relative</div>
+			<div style="position:absolute;" class="positionThis">absolute</div>
+			<div style="position:fixed;"  class="positionThis">fixed</div>
+			<div class="positionThis">static</div>
+		</div>
+	</div>
+	<div id="flex">
+		<p>Flex is a modern display property with many benefits...</p>
+		<div id="flexcontainer">
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+		</div>
+	</div>
+
+	<div id="animation">
+		<div id="animatethis">hi</div>
+	</div>
+
+	<div id="selector">
+		<p class="para">selectors</p>
+		<table>
+			<tr>
+				<td>r1,c1</td>
+				<td rowspan="2">r1,c2</td>
+				<td>r1,c3</td>
+				<td>r1,c4</td>
+			</tr>
+			<tr>
+				<td>r2,c1</td>
+				<td>r2,c3</td>
+				<td>r2,c4</td>
+			</tr>
+			<tr>
+				<td>r3,c1</td>
+				<td>r3,c2</td>
+				<td>r3,c3</td>
+				<td>r3,c4</td>
+			</tr>
+			<tr>
+				<td>r4,c1</td>
+				<td>r4,c2</td>
+				<td>r4,c3</td>
+				<td>r4,c4
+					<table>
+						<tr>
+							<td>embedded table</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="cascadecontainer">
+		<h6 id="cascade" class="cascading" style="font-size: 11px;">test this cascade</h6>
+	</div>
+
+	<div id="media">
+		<h1 class="custom">This is a custom font</h1>
+		<div class="column" id="c1">
+			<h1>this is column 1</h1>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="column" id="c2">
+			<h1>this is column 2</h1>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<br style="clear:both;">
+	</div>
+	<footer id="foot">
+		This is reserved for the bottom of your page.<br> &copy; &trade; &amp; &nbsp;&nbsp;&nbsp; company 2016. All rights reserved.
+	</footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>HTML and CSS Study</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<!--navigation-->
+	<header>
+		<img id="logo" src="assets/img/logo.png">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="htmlcheatsheet.html">HTML</a></li>
+				<li><a href="cssstudy.html">CSS</a>
+					<ul>
+						<li><a href="cssstudy.html#type">Typography</a></li>
+						<li><a href="cssstudy.html#layout">Layout</a></li>
+						<li><a href="cssstudy.html#position">Position</a></li>
+						<li><a href="cssstudy.html#flex">Flex</a></li>
+						<li><a href="cssstudy.html#animation">Animation</a></li>
+						<li><a href="cssstudy.html#cascade">Cascade</a></li>
+						<li><a href="cssstudy.html#media">Media Query</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!--page title-->
+	<h1 class="title">HTML and CSS Study: Popular HTML tags</h1>
+
+	<h2>Text Elements</h2>
+	<h1>Header 1</h1>
+	<h2>Header 2</h2>
+	<h3>Header 3</h3>
+	<h4>Header 4</h4>
+	<h5>Header 5</h5>
+	<h6>Header 6</h6>
+	<p>
+		<b>This is bold,</b>
+		<i>italic,</i>
+		<span>span,</span>
+		<a href="about.html">this ia a relative link to position page</a>
+		<a href="https://www.facebook.com/beyonce/" target="_blank">Absolute Link to Beyonce's Facebook</a> <a href="#foot">Jump to footer</a>
+		<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</p>
+	<p>And this is another paragraph.</p>
+	<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+	<p>Buttons are links with a specific class:<br>
+		<a href="cssstudy.html" class="btn">Button</a>
+	</p>
+
+	<h2>Lists</h2>
+	<ol>
+		<li class="group1">thing A</li>
+		<li>thing B</li>
+		<li>thing C
+			<ol>
+				<li>Sublist item I</li>
+				<li>Sublist item II</li>
+				<li>Sublist item III</li>
+			</ol>
+		</li>
+	</ol>
+	<ul>
+		<li class="group1">thing A</li>
+		<li>thing B</li>
+		<li>thing C
+			<ul>
+				<li>Sublist item I</li>
+				<li>Sublist item II</li>
+				<li>Sublist item III</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2>Media</h2>
+	<img src="assets/img/pony1.jpg">
+	<br>
+	<audio controls>
+		<source src="assets/audio/cafesong.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<br>
+	<video controls>
+		<source src="assets/video/castlehome.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ZcBNxuKZyN4" frameborder="0" allowfullscreen></iframe>
+
+	<h2>Forms</h2>
+	<form>
+		<label> First Name<br>
+			<input type="text" name="fname" placeholder="Bruce" required>
+		</label>
+		<br>
+		<label>Last Name<br>
+			<input type="text" name="lname" placeholder="Wayne">
+		</label>
+		<br>
+		<label>Password<br>
+			<input type="password" name="pswd" placeholder="password">
+		</label>
+		<br>
+		<label>Birthday<br>
+			<input type="date" name="bday" required>
+		</label>
+		<br>
+		<label>Profile Pic<br>
+			<input type="file" name="pic">
+		</label>
+		<br>
+		<label>Email<br>
+			<input type="email" name="email" placeholder="email@gmail.com">
+		</label>
+		<br>
+		<h5>Gender</h5>
+		<label>
+			<input type="radio" name="gender" value="m"> Male
+		</label>
+		<p>some stuff</p>
+		<label>
+			<input type="radio" name="gender" value="f"> Female
+		</label>
+		<br>
+		<h5>Favorite Music</h5>
+		<label>
+			<input type="checkbox" name="genre" value="pop"> POP
+		</label>
+		<br>
+		<label>
+			<input type="checkbox" name="genre" value="rock"> ROCK 'N ROLL
+		</label>
+		<br>
+		<label>
+			<input type="checkbox" name="genre" value="hiphop"> HIP-HOP
+		</label>
+		<br>
+		<h5>State</h5>
+		<select>
+			<option name="state" value="NY" >New York</option>
+			<option name="state" value="NJ" >New Jersey</option>
+			<option name="state" value="FL" >Florida</option>
+		</select>
+		<br>
+		<label>Message<br>
+			<textarea name="info" placeholder="my info"></textarea>
+		</label>
+		<br>
+		<input type="submit" name="submit" value="Register">
+		<br>
+		<input type="reset" name="reset this form" value="Oops Restart">
+	</form>
+
+	<h2>Tables</h2>
+	<table border="1" cellpadding="2">
+		<tr>
+			<th>c header 1</th>
+			<th>c header 2</th>
+			<th>c header 3</th>
+			<th>c header 4</th>
+			<th>c header 5</th>
+			<th>c header 6</th>
+		</tr>
+		<tr>
+			<td>Here's a nested table
+				<table>
+					<tr>
+						<td>Inner cell a</td>
+						<td>Inner cell b</td>
+					</tr>
+				</table>
+			</td>
+			<td>cell 1</td>
+			<td>cell 2</td>
+			<td colspan="3">cell 3 merging</td>
+		</tr>
+		<tr>
+			<td>cell 4</td>
+			<td>cell 5</td>
+			<td>cell 6</td>
+			<td rowspan="2">cell 7 merging</td>
+			<td>cell 8</td>
+			<td>cell 9</td>
+		</tr>
+		<tr>
+			<td>cell 10</td>
+			<td>cell 11</td>
+			<td>cell 12</td>
+			<td>cell 13</td>
+		</tr>
+	</table>
+
+	<h2>Containers</h2>
+	<div>
+		containers can contain other containers and content. hrs seperate
+		<hr>content
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		</div>
+		<section>
+			sections behave like divs
+		</section>
+		<article>
+			as do articles
+		</article>
+	</div>
+	<footer id="foot">
+		This is reserved for the bottom of your page.<br> &copy; &trade; &amp; &nbsp;&nbsp;&nbsp; company 2016. All rights reserved.
+	</footer>
+</body>
+</html>

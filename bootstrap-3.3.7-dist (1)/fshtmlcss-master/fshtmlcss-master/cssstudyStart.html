@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>HTML and CSS Study</title>
+<link rel="stylesheet" href="assets/css/cass.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+</style>
+</head>
+<body>
+	<!--navigation-->
+	<header>
+		<img id="logo" src="assets/img/logo.png">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="htmlcheatsheet.html">HTML</a></li>
+				<li><a href="cssstudy.html">CSS</a>
+					<ul>
+						<li><a href="cssstudy.html#type">Typography</a></li>
+						<li><a href="cssstudy.html#layout">Layout</a></li>
+						<li><a href="cssstudy.html#position">Position</a></li>
+						<li><a href="cssstudy.html#flex">Flex</a></li>
+						<li><a href="cssstudy.html#animation">Animation</a></li>
+						<li><a href="cssstudy.html#cascade">Cascade</a></li>
+						<li><a href="cssstudy.html#media">Media Query</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!--page title-->
+	<h1 class="title">CSS Study</h1>
+
+	<div id="type">
+		<h2>Typography</h2>
+		<blockquote id="typestudy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+	</div>
+	<div id="layout">
+		<h2>Layout</h2>
+		<p>Spacing, Border, and Backgrounds</p>
+		<div id="bdr">
+			Customize border
+		</div>
+		<div id="bgc">
+			Customizebg color
+		</div>
+		<div id="bgg">
+			Customize bg gradient
+		</div>
+		<div id="bgi">
+			Customize bg image
+		</div>
+		
+		<p>We can also use margins to center content like so...</p>
+		
+		<div id="centerThis">
+			<p>this div is centered on the page</p>
+		</div>
+		<div id="shadows">
+			<h1>Text Shadow</h1>
+		</div>
+		<p>Elements like DIV and P are Block Elements. Sometimes we need the change the Display Property to get what we want. Check out this test:</p>
+		
+		<a href="" class="linkimg">
+			<img src="assets/img/pony4.png">
+		</a>
+		<br><br>
+		<a href="" class="linkimg linkblk">
+			<img src="assets/img/pony4.png">
+		</a>
+		
+		<p>There are a few ways to display DIVs vertically. setting them to inline block is one.</p>
+		<div class="w200">
+			<p>this div has a width of 200px</p>
+		</div>
+		<div class="w200">
+			<p>Same here, but the DIVS still stack even if there is room</p>
+		</div>
+		
+		<div class="w200 dib">
+			<p>but changing display to inline block</p>
+		</div>
+		<div class="w200 dib">
+			<p>will have them stack horizontally. here's some more text to to see the vertical alignment</p>
+		</div>
+		<div>
+			<h3 class="vertalign"><img src="assets/img/pony1.jpg"> vertical align also works when placing an image in a line of text</h3>
+		</div>
+		<p>another way to horizontally align div is using float.</p>
+		<div id="floatContainer">
+			<div class="floatThis">
+				<p>column 1</p>
+			</div>
+			<div class="floatThis">
+				<p>column 2</p>
+			</div>
+			<br style="">
+			<p>remember to clear the float when done either with a br clear both of and ::after on the container</p>
+			
+			<p>
+				<img src="assets/img/pony3.png" style="">
+				Floats are originally used to wrap content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<p>widths</p>
+		<div style="">
+			set in px
+		</div>
+		<div style="">
+			set in %
+		</div>
+		<div style="">
+			set in em
+		</div>
+		<div style="">
+			set in calc
+		</div>
+		<div style="">
+			set in viewport width
+		</div>
+		<p>height</p>
+		<div style="">
+			set in px
+		</div>
+		<div style="">
+			set in em
+		</div>
+		<div style="">
+			set in viewport height
+		</div>
+		<p>note percent in height doesn't work unless parent height is declared</p>
+		<div style="">
+			set in % doesn't work...
+		</div>
+		<div style="">
+			<div style="">
+				...unless the parent has a height
+			</div>
+			<div style="">
+				calc works too
+			</div>
+		</div>
+		<div style="">
+			<p>content overflow</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	<div id="position">
+		<p>positions and z-index</p>
+		<div style="">
+			<div style="" class="positionThis">relative</div>
+			<div style="" class="positionThis">absolute</div>
+			<div style=""  class="positionThis">fixed</div>
+			<div class="">static</div>
+		</div>
+	</div>
+	<div id="flex">
+		<p>Flex is a modern display property with many benefits...</p>
+		<div id="flexcontainer">
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+			<div class="flexcontent">hi</div>
+			<div class="flexcontent">hi this is a div.</div>
+		</div>
+	</div>
+
+	<div id="animation">
+		<div id="animatethis">hi</div>
+	</div>
+
+	<div id="selector">
+		<p class="para">selectors</p>
+		<table>
+			<tr>
+				<td>r1,c1</td>
+				<td rowspan="2">r1,c2</td>
+				<td>r1,c3</td>
+				<td>r1,c4</td>
+			</tr>
+			<tr>
+				<td>r2,c1</td>
+				<td>r2,c3</td>
+				<td>r2,c4</td>
+			</tr>
+			<tr>
+				<td>r3,c1</td>
+				<td>r3,c2</td>
+				<td>r3,c3</td>
+				<td>r3,c4</td>
+			</tr>
+			<tr>
+				<td>r4,c1</td>
+				<td>r4,c2</td>
+				<td>r4,c3</td>
+				<td>r4,c4
+					<table>
+						<tr>
+							<td>embedded table</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="cascadecontainer">
+		<h6 id="cascade" class="cascading" style="">test this cascade</h6>
+	</div>
+
+	<div id="media">
+		<h1 class="custom">This is a custom font</h1>
+		<div class="column" id="c1">
+			<h1>this is column 1</h1>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="column" id="c2">
+			<h1>this is column 2</h1>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<br style="">
+	</div>
+	<footer id="foot">
+		This is reserved for the bottom of your page.<br> &copy; &trade; &amp; &nbsp;&nbsp;&nbsp; company 2016. All rights reserved.
+	</footer>
+</body>
+</html>
